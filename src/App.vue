@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style>
-@import "./photon/css/photon.min.css";
+@import "./assets/photon/css/photon.min.css";
 
 #app {
   margin: 0;
