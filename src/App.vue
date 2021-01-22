@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="nav-group">
+    <nav class="nav-group sidebar animate-right">
       <h5 class="nav-group-title">
         <span class="icon icon-tools" />
         Ferramentas
@@ -32,7 +32,7 @@
       </router-link>
     </nav>
     <main>
-      <router-view></router-view>
+      <router-view class="animate-up"></router-view>
     </main>
   </div>
 </template>
@@ -54,7 +54,8 @@ export default {
 </script>
 
 <style>
-@import "./assets/photon/css/photon.min.css";
+@import "./assets/style/photon/css/photon.min.css";
+@import "./assets/style/animations.css";
 
 #app {
   margin: 0;
@@ -67,7 +68,6 @@ export default {
   width: 15%;
   min-width: 150px;
   margin-right: 20px;
-  background: #f1f1f1;
 }
 
 #app main {
@@ -75,5 +75,25 @@ export default {
 
 .nav-group-item {
   cursor: pointer;
+}
+
+.nav-group-item:hover {
+  background-color: #0082417b;
+  color: #fff;
+  transition: all .15s;
+}
+
+.nav-group-item:hover > .icon {
+  color: #fff;
+  transition: all .15s;
+}
+
+.active {
+  background-color: #008241 !important;
+  color: #fff !important;
+}
+
+.active > .icon {
+  color: #fff;
 }
 </style>
