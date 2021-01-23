@@ -8,7 +8,6 @@
       <router-link
         to="/"
         class="nav-group-item"
-        @click.native="getPath"
         :class="$route.path == '/' ? 'active' : ''"
       >
         <span class="icon icon-info-circled"></span>
