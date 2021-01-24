@@ -19,7 +19,7 @@
         :class="$route.path == '/header-migration' ? 'active' : ''"
       >
         <span class="icon icon-shuffle"></span>
-        Migração de cabeçalho
+        Atualizar cabeçalho
       </router-link>
       <router-link
         to="/merge"

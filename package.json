@@ -1,7 +1,12 @@
 {
-  "name": "app",
+  "name": "treetech-csv-tools",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Filipe Veronezi",
+    "email": "filipeseidi@hotmail.com",
+    "url": "https://github.com/filipeveronezi"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
