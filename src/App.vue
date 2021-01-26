@@ -14,6 +14,14 @@
         Sobre
       </router-link>
       <router-link
+        to="/csv-view"
+        class="nav-group-item"
+        :class="$route.path == '/csv-view' ? 'active' : ''"
+      >
+        <span class="icon icon-eye"></span>
+        Visualizar CSV
+      </router-link>
+      <router-link
         to="/header-migration"
         class="nav-group-item"
         :class="$route.path == '/header-migration' ? 'active' : ''"
@@ -65,11 +73,14 @@ export default {
 
 #app nav {
   width: 15%;
-  min-width: 150px;
+  min-width: 230px;
   margin-right: 20px;
 }
 
 #app main {
+  width: 100vw;
+  height: 100vh;
+  padding-right: 20px;
 }
 
 .nav-group-item {

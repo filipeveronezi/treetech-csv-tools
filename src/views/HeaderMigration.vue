@@ -1,15 +1,23 @@
 <template>
   <div id="header-migration">
-    <h1>Migration</h1>
+    <OpenFile/>
   </div>
 </template>
 
 <script>
-export default {
+import OpenFile from '../components/OpenFile'
 
+export default {
+  components: {
+    OpenFile
+  }
 }
 </script>
 
-<style>
-
+<style scoped>
+  #header-migration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
