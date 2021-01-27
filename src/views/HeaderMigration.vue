@@ -1,23 +1,28 @@
 <template>
-  <div id="header-migration">
-    <OpenFile/>
+  <div id="about">
+    <span class="icon icon-cog"></span>
+    <p>Work in progress...</p>
   </div>
 </template>
 
 <script>
-import OpenFile from '../components/OpenFile'
-
-export default {
-  components: {
-    OpenFile
-  }
-}
+export default {};
 </script>
 
-<style scoped>
-  #header-migration {
+<style>
+  #about {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #about p {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .icon {
+    font-size: 20px;
   }
 </style>

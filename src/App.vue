@@ -81,6 +81,9 @@ export default {
   height: 100vh;
   padding: 0 30px 0 20px;
   overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-group-item {

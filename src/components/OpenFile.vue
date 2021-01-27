@@ -38,8 +38,6 @@ export default {
     async openFile(file) {
       this.fileName = file.file.name;
 
-      console.log(file.data)
-
       const header = file.data.split("\n")[0];
 
       if (this.checkHeader(header)) {
