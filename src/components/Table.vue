@@ -1,54 +1,54 @@
 <template>
-  <table class="table-striped" id="csv-table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Kind</th>
-        <th>File Size</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>photon.css</td>
-        <td>CSS</td>
-        <td>28K</td>
-      </tr>
-      <tr>
-        <td>photon.css</td>
-        <td>CSS</td>
-        <td>28K</td>
-      </tr>
-      <tr>
-        <td>photon.css</td>
-        <td>CSS</td>
-        <td>28K</td>
-      </tr>
-      <tr>
-        <td>photon.css</td>
-        <td>CSS</td>
-        <td>28K</td>
-      </tr>
-      <tr>
-        <td>photon.css</td>
-        <td>CSS</td>
-        <td>28K</td>
-      </tr>
-      <tr>
-        <td>photon.css</td>
-        <td>CSS</td>
-        <td>28K</td>
-      </tr>
-    </tbody>
-  </table>
+  <div id="csv-table">
+    <vue-good-table
+      :columns="columns"
+      :rows="rows"
+      styleClass="vgt-table striped bordered"
+    />
+  </div>
 </template>
 
 <script>
-export default {};
+import "vue-good-table/dist/vue-good-table.css";
+import { VueGoodTable } from "vue-good-table";
+import { headerFull, headerTrimmed } from "../assets/header";
+
+export default {
+  components: {
+    VueGoodTable,
+  },
+  data() {
+    return {
+      columns: [],
+      rows: [],
+    };
+  },
+  methods: {
+    fillHeader() {
+      headerFull.forEach((value, index) => {
+        this.columns[index] = {
+          label: value,
+          field: headerTrimmed[index],
+          type: "String",
+        };
+      });
+    },
+    fillData(csvData) {
+      csvData.forEach((value) => {
+        this.rows.push(value);
+      });
+    },
+  },
+  created: function() {
+    this.fillHeader();
+  },
+};
 </script>
 
 <style>
-  #csv-table {
-    width: 100%;
-    border: 2px solid #f6f6f6;
-  }
+#csv-table {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="csv-view">
-    <OpenFile id="open-file"/>
-    <Table id="csv-table"/>
+    <OpenFile id="open-file" @openFile="handleCSV"/>
+    <Table id="csv-table" ref="csvTable"/>
   </div>
 </template>
 
@@ -10,8 +10,19 @@ import OpenFile from '../components/OpenFile'
 import Table from '../components/Table'
 
 export default {
+  name: "CSVVisualization",
   components: {
     OpenFile, Table
+  },
+  data() {
+    return {
+    }
+  },
+  methods: {
+    handleCSV(data) {
+      console.log(data)
+      this.$refs.csvTable.fillData(data)
+    }
   }
 }
 </script>
@@ -22,6 +33,16 @@ export default {
   height: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 10vh 1fr;
+  grid-template-rows: 100px 1fr;
+}
+
+#open-file {
+  align-self: center;
+  justify-self: center;
+}
+
+#csv-table {
+  align-self: center;
+  justify-self: center;
 }
 </style>

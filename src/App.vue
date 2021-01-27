@@ -72,15 +72,15 @@ export default {
 }
 
 #app nav {
-  width: 15%;
+  width: 15vw;
   min-width: 230px;
-  margin-right: 20px;
 }
 
 #app main {
-  width: 100vw;
+  width: 85vw;
   height: 100vh;
-  padding-right: 20px;
+  padding: 0 30px 0 20px;
+  overflow-y: scroll;
 }
 
 .nav-group-item {

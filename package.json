@@ -19,7 +19,11 @@
   "main": "background.js",
   "dependencies": {
     "core-js": "^3.6.5",
+    "csvtojson": "^2.0.10",
+    "json2csv": "^5.0.5",
     "vue": "^2.6.11",
+    "vue-filereader": "^0.1.1",
+    "vue-good-table": "^2.21.3",
     "vue-router": "^3.4.9"
   },
   "devDependencies": {
